@@ -1,0 +1,111 @@
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  --primary: #5EA857;
+  --secondary: #A2CC6C;  
+  --white: #fff;
+  --black: #000;
+
+  min-height: 100vh;
+  width: 100vw;
+  font-family: 'Montserrat', sans-serif;
+
+  position: relative;
+  overflow-x: hidden;
+
+  background-color: var(--primary);
+}
+
+.background-circle {
+  width: 90vw;
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  background-color: var(--secondary);
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+}
+
+.forest {
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container {
+  padding: 1rem;
+  position: relative;
+}
+
+.container__title {
+  font-size: 3.375rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  max-width: 70%;
+  margin: 0 auto;
+  padding-bottom: 150px;
+}
+
+.card-link,
+.card-link:visited {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 0.625rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+}
+
+.card__title {
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.card_subtitle {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .background-circle {
+    width: 120vh;
+  }
+
+  .forest {
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .card-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 3.125rem 0;
+  }
+}
