@@ -10,7 +10,8 @@ body {
 
 body {
   --primary: #5EA857;
-  --secondary: #A2CC6C;  
+  --secondary: #A2CC6C;
+  --dark-green: #363635;
   --white: #fff;
   --black: #000;
 
@@ -22,6 +23,26 @@ body {
   overflow-x: hidden;
 
   background-color: var(--primary);
+}
+
+.test-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--dark-green);
+  color: var(--white);
+  font-weight: bold;
+  padding: 0.9375rem;
+  border-radius: 0.625rem;
+  text-decoration: none;
+  margin-bottom: 1.5625rem;
+}
+
+.test-link__image {
+  height: 1.5625rem;
+  width: 1.5625rem;
+  margin-right: 0.5rem;
 }
 
 .background-circle {
@@ -107,5 +128,12 @@ body {
   .card-container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     padding: 3.125rem 0;
+  }
+
+  .test-link {
+    position: absolute;
+    left: 10%;
+    top: 8%;
+    z-index: 50;
   }
 }
