@@ -112,6 +112,16 @@ body {
   font-size: 1.5rem;
 }
 
+.card__icon {
+  width: 6.25rem;
+  height: 6.25rem;
+}
+
+.card__device {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 @media (min-width: 768px) {
   .background-circle {
     width: 120vh;
